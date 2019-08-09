@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>151.0</x>
+			<y>193.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>319.0</x>
+			<y>154.0</y>
+			<label>Symbol::SUM</label>
+			<final/>
+		</state>
+		<state id="2" name="q2">
+			<x>311.0</x>
+			<y>259.0</y>
+			<label>Symbol::MULT</label>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>*</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>+</read>
+		</transition>
+		<note>
+			<text>Name:Ops</text>
+			<x>158.0</x>
+			<y>67.0</y>
+		</note>
+	</automaton>
+</structure>

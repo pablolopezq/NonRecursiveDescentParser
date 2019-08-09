@@ -1,0 +1,31 @@
+#include <cstdio>
+#include <cstdlib>
+#include <cctype>
+#include <sstream>
+#include "expr_lexer.h"
+
+/*!fa2lexer
+    %option generate.tokens = false;
+
+    %file "Start.jff";
+    %file "ID.jff";
+    %file "Parens.jff";
+    %file "Nums.jff";
+    %file "Ops.jff";
+
+    %generate.state_enum(State);
+*/
+
+Symbol ExprLexer::getNextToken() 
+{
+/*!fa2lexer
+    %generate.lexer (text);
+*/
+}
+
+const char *ExprLexer::tokenToString(Symbol tk)
+{
+/*!fa2lexer
+    %generate.toString (tk);
+*/
+}

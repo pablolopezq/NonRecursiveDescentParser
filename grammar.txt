@@ -1,0 +1,9 @@
+E -> T E'
+E' -> SUM T E'
+E' -> ''
+T -> F T'
+T' -> MULT F T'
+T' -> ''
+F -> ( E )
+F -> ID
+F -> NUM
