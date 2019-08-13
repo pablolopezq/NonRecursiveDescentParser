@@ -1,9 +1,9 @@
-//#include "Table.cpp"
+#include "Table.cpp"
 #include "Parser.h"
 
 void Parser::parse(){
 	
-	stck.push(Symbol::Eof);
+	stck.push(Symbol::E);
 	token = lexer.getNextToken();
 
 	while(!stck.empty()){
@@ -19,13 +19,13 @@ void Parser::parse(){
 				token = lexer.getNextToken();
 			}
 			else{
-				throw "Error";
+				throw std::string("Expected ") + lexer.tokenToString(top) + " found " + lexer.getText();
 			}
 		}
 		else{
 			Rule rule = ll1_table[top_index][token_index];
 			if(rule.isEmpty())
-				throw "Error";
+				throw "Unexpected token: " + lexer.getText();
 
 			stck.pop();
 

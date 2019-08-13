@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 
 #include "Parser.h"
 //include "ExprLexer.h"
@@ -23,8 +24,9 @@ int main(int argc, char const *argv[]){
 
     try{
     	parser.parse();
+        std::cout << "Parsed successfully" << std::endl;
     }
-    catch(const char* e){
+    catch(std::string& e){
     	cerr << e << endl;
     }
 

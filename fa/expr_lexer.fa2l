@@ -7,9 +7,9 @@
 /*!fa2lexer
     %option generate.tokens = false;
 
-    %file "Start.jff";
-    %file "ID.jff";
     %file "Parens.jff";
+    %file "ID.jff";
+    %file "Start.jff";
     %file "Nums.jff";
     %file "Ops.jff";
 
